@@ -7,18 +7,6 @@
     "test": "jest",
     "test:staged": "jest"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*": [
-      "eslint 'src/**' --fix",
-      "npm run test:staged",
-      "git add"
-    ]
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
