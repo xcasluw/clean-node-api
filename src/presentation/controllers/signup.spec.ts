@@ -3,7 +3,7 @@ describe('SignUp Controller', () => {
 
   })
 })
-describe('1 to be 2', () => {
+describe('1 to be 1', () => {
   test('Test', () => {
     expect(1).toBe(2)
   })
