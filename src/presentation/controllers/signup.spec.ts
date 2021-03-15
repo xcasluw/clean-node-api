@@ -1,10 +1,17 @@
-describe('SignUp Controller', () => {
-  test('', () => {
+import { SignUpController } from './signup'
 
-  })
-})
-describe('1 to be 1', () => {
-  test('Test', () => {
-    expect(1).toBe(2)
+describe('SignUp Controller', () => {
+  test('Should return 400 if no name is provided', () => {
+    // SUT = System under test
+    const sut = new SignUpController()
+    const httpRequest = {
+      body: {
+        email: 'any_email@mail.com',
+        password: 'any_password',
+        passwordConfirmation: 'any_password'
+      }
+    }
+    const httpResponse = sut.handle(httpRequest)
+    expect(httpResponse.statusCode).toBe(400)
   })
 })
