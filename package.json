@@ -30,10 +30,14 @@
   "dependencies": {},
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.ts": "eslint --cache --fix"
+    "*.ts": [
+      "eslint --cache --fix",
+      "git add"
+    ]
   }
 }
